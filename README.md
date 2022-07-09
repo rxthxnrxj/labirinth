@@ -8,7 +8,7 @@ The person is now required to record (which is also in-built in code) by pronoun
 
 ## Concepts:
 1.	STFT (Short Time Fourier Transform): As the input given to the system is a sequence of words all together. We have to first split the sequence into words into chunks of audio and later separate out the phonetic associated with it. For this, STFT is used to determine the sinusoidal frequency of local sections
-    1.1 The procedure for computing STFTs is to divide a longer time signal into shorter segments of equal length and then compute the Fourier transform separately on each shorter segment.
+    > The procedure for computing STFTs is to divide a longer time signal into shorter segments of equal length and then compute the Fourier transform separately on each shorter segment.
 2. Filtering: The spectral input from STFT is later fed into a function that calculated the decibels from the amplitude using the formula: dB = 20 * log10(amplitude)
     2.1 Further, non-mute areas are identified and filtered into timestamps by dividing the timeframe with sampling rate.
 3.  Down Sampling: The number of samples of a audio file is reduced without losing the features of it’s originality. 
