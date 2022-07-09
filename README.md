@@ -6,8 +6,8 @@ So, our aim was to create an aid for this problem statement.  We collected the u
 
 The person is now required to record (which is also in-built in code) by pronouncing all the words in the specified order. We get this and use further techniques like STFT, FFT, Threshold filtering to map their frequency to that respective phonetic. Thus, in the future, when an unknown audio input of the partially dumb person is given, the word they’re actually trying to pronounce can be predicted with this process and its phonetic representation is displayed.
 
-#Concepts:
-1.	#STFT (Short Time Fourier Transform): As the input given to the system is a sequence of words all together. We have to first split the sequence into words into chunks of audio and later separate out the phonetic associated with it. For this, STFT is used to determine the sinusoidal frequency of local sections
+## Concepts:
+1.	STFT (Short Time Fourier Transform): As the input given to the system is a sequence of words all together. We have to first split the sequence into words into chunks of audio and later separate out the phonetic associated with it. For this, STFT is used to determine the sinusoidal frequency of local sections
     1.1 The procedure for computing STFTs is to divide a longer time signal into shorter segments of equal length and then compute the Fourier transform separately on each shorter segment.
 2. Filtering: The spectral input from STFT is later fed into a function that calculated the decibels from the amplitude using the formula: dB = 20 * log10(amplitude)
     2.1 Further, non-mute areas are identified and filtered into timestamps by dividing the timeframe with sampling rate.
