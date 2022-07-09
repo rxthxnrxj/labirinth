@@ -8,14 +8,17 @@ The person is now required to record (which is also in-built in code) by pronoun
 
 ## Concepts:
 1.	STFT (Short Time Fourier Transform): 
-    > As the input given to the system is a sequence of words all together. We have to first split the sequence into words into chunks of audio and later separate out the phonetic associated with it. For this, STFT is used to determine the sinusoidal frequency of local sections
+    - As the input given to the system is a sequence of words all together. We have to first split the sequence into words into chunks of audio and later separate out the phonetic associated with it. For this, STFT is used to determine the sinusoidal frequency of local sections
     > The procedure for computing STFTs is to divide a longer time signal into shorter segments of equal length and then compute the Fourier transform separately on each shorter segment.
 2. Filtering: 
-    > The spectral input from STFT is later fed into a function that calculated the decibels from the amplitude using the formula: dB = 20 * log10(amplitude)
+    - The spectral input from STFT is later fed into a function that calculated the decibels from the amplitude using the formula: dB = 20 * log10(amplitude)
     > Further, non-mute areas are identified and filtered into timestamps by dividing the timeframe with sampling rate.
-3.  Down Sampling: The number of samples of a audio file is reduced without losing the features of it’s originality. 
-    3.1 Down sampling is done to speed up the following FFT process by reducing the number of samples
-4.	FFT (Fast Fourier Transform): Using FFT, the audio signal which we have as chunks, only the phonetic part is split and FFT is applied over that time domain signal. After FFT, the time domain signal is now obtained in frequency domain which does justice to the process of predicting.
-    4.1	Now, the fundamental frequency of the resultant FFT is calculated and mapped to the respective phonetic it’s supposed to represent
-    4.2	x[K]=∑n=0N−1x[n]WnkN (library was used for implementation)
-5.	Thresholding: Once the mapping is done, for the working of this system, any test audio of the person is given as an input, where Thresholding is performed to only find the significant parts of the input and further work on this result.
+3.  Down Sampling: 
+    - The number of samples of a audio file is reduced without losing the features of it’s originality. 
+    > Down sampling is done to speed up the following FFT process by reducing the number of samples
+4.	FFT (Fast Fourier Transform): 
+    - Using FFT, the audio signal which we have as chunks, only the phonetic part is split and FFT is applied over that time domain signal. After FFT, the time domain signal is now obtained in frequency domain which does justice to the process of predicting.
+    >	Now, the fundamental frequency of the resultant FFT is calculated and mapped to the respective phonetic it’s supposed to represent
+    >	x[K]=∑n=0N−1x[n]WnkN (library was used for implementation)
+5.	Thresholding: 
+    - Once the mapping is done, for the working of this system, any test audio of the person is given as an input, where Thresholding is performed to only find the significant parts of the input and further work on this result.
