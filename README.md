@@ -2,7 +2,7 @@
 
 Conversations are key to exchange of thoughts, ideas and listening to each other. We cannot imagine a life without conversing. But not everyone is gifted with that comfort. Whatever we speak, can be divided into fundamental phonetics that make up the overall sound of any basic word.  And each phonetic is mapped with a particular frequency an individual is able to vibrate at. But, as said earlier, few people, for example, autistic people, try pronouncing words in their own range of frequencies which does not satisfy the levels required for an actual pronunciation. 
 
-So, our aim was to create an aid for this problem statement.  We collected the universal words and their respective phonetics and proceeded to filter out only the unique phonetics present. Now, a context implementing all the phonetics with day-to-day words was created.
+> So, our aim was to create an aid for this problem statement.  We collected the universal words and their respective phonetics and proceeded to filter out only the unique phonetics present. Now, a context implementing all the phonetics with day-to-day words was created.
 
 The person is now required to record (which is also in-built in code) by pronouncing all the words in the specified order. We get this and use further techniques like STFT, FFT, Threshold filtering to map their frequency to that respective phonetic. Thus, in the future, when an unknown audio input of the partially dumb person is given, the word they’re actually trying to pronounce can be predicted with this process and its phonetic representation is displayed.
 
